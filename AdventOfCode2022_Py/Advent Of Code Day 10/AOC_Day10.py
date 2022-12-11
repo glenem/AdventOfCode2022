@@ -72,20 +72,9 @@ class CPU:
         self.cycles = []
     
     def check_cycle(self):
-        if self.cycle_counter == 20\
-        or self.cycle_counter == 60\
-        or self.cycle_counter == 100\
-        or self.cycle_counter == 140\
-        or self.cycle_counter == 180\
-        or self.cycle_counter == 220:
-            
-            
+        if self.cycle_counter in range(20, 221, 40):
            self.cycles.append((self.cycle_counter, self.X))
-            
-        else:
-            pass
-    
-    
+        
     def execute_code(self, code):
         for line in code:
             
